@@ -1,0 +1,172 @@
+CODE BACKUP FILES and STEP BY STEP CHANGES : For Reference
+Help for Debugging Problems:
+Here's the code backup at the end of Step 07: https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/step07.md
+
+Step by Step changes are detailed here:https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/01-step-by-step-changes/readme.md#step-01
+
+Two Recommended Activities:
+Activity - 1 : Explore other backups for this section (Steps 08,10,13,15,21,25,29, final) - https://github.com/in28minutes/spring-microservices-v3/tree/main/03.microservices
+
+Activity - 2 : Get Familiar with the structure of Step by Step changes file - https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/01-step-by-step-changes/readme.md#step-01
+
+Debugging problems with Spring Cloud Config Server - V2
+Debugging microservices problems can be difficult as there are multiple components involved.
+
+Step by Step instructions is provided in the troubleshooting guide to help you troubleshoot frequently occurring problems.
+
+Using the Chrome Browser is recommended.
+
+https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/01-step-by-step-changes/readme.md#spring-cloud-config-server---steps-01-to-08
+
+
+CODE BACKUP FILES and STEP BY STEP CHANGES : For Reference
+Help for Debugging Problems:
+Here's the code backup at the end of Step 13: https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/step13.md
+
+Step by Step changes are detailed here: https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/01-step-by-step-changes/readme.md#step-13
+
+
+
+Two Recommended Activities:
+Activity - 1 : Explore other backups for this section (Steps 08,10,13,15,21,25,29, final) - https://github.com/in28minutes/spring-microservices-v3/tree/main/03.microservices
+
+Activity - 2 : Get Familiar with the structure of Step by Step changes file - https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/01-step-by-step-changes/readme.md#step-13
+
+
+URL and Response Structure for Currency Conversion Service
+We will make use of these in the next lecture!
+
+
+
+Debugging Problems with Eureka - V2
+Debugging microservices problems can be difficult as there are multiple components involved.
+
+Step by Step instructions is provided in the troubleshooting guide to help you troubleshoot frequently occurring problems.
+
+Using the Chrome Browser is recommended.
+
+
+
+COMPLETE DEBUGGING GUIDE
+
+https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/01-step-by-step-changes/readme.md#eureka---step-19-to-21
+
+
+
+Top Recommendation From Debugging Guide:
+
+Give these settings a try individually in application.properties of all microservices (currency-exchange, currency-conversion) to see if they help
+
+eureka.instance.prefer-ip-address=true
+OR
+
+eureka.instance.hostname=localhost
+
+Course Update - Github Repositories
+Thank you so much for enrolling, I'm so excited for you to start your microservices journey!
+
+👉 DO YOU KNOW?
+We are maintaining multiple Github Repositories for this course to make it easy for you to use different Spring Boot versions.
+
+👉 WHAT SHOULD YOU DO?
+Use the following repo's based on your Spring Boot version
+
+Spring Boot 3.0+ - https://github.com/in28minutes/spring-microservices-v3
+
+Spring Boot 2.4+ - https://github.com/in28minutes/spring-microservices-v2
+
+I'll see you at the next lecture!
+
+Happy Learning
+
+Ranga
+
+
+
+
+URLs for next Lecture
+Some of these URLs may be complex to write by hand:
+
+Refer back to here if you have problems in the next steps.
+
+
+
+Initial
+
+- http://localhost:8765/CURRENCY-EXCHANGE/currency-exchange/from/USD/to/INR
+
+- http://localhost:8765/CURRENCY-CONVERSION/currency-conversion/from/USD/to/INR/quantity/10
+
+- http://localhost:8765/CURRENCY-CONVERSION/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+
+
+Lower Case
+
+- http://localhost:8765/currency-exchange/currency-exchange/from/USD/to/INR
+
+- http://localhost:8765/currency-conversion/currency-conversion/from/USD/to/INR/quantity/10
+
+- http://localhost:8765/currency-conversion/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+
+
+Custom Routes
+
+- http://localhost:8765/currency-exchange/from/USD/to/INR
+
+- http://localhost:8765/currency-conversion/from/USD/to/INR/quantity/10
+
+- http://localhost:8765/currency-conversion-feign/from/USD/to/INR/quantity/10
+
+- http://localhost:8765/currency-conversion-new/from/USD/to/INR/quantity/10
+
+
+
+Debugging Problems with Spring Cloud Gateway - V2
+Debugging microservices problems can be difficult as there are multiple components involved.
+
+Step by Step instructions is provided in the troubleshooting guide to help you troubleshoot frequently occurring problems.
+
+Using the Chrome Browser is recommended.
+
+
+
+COMPLETE DEBUGGING GUIDE
+
+https://github.com/in28minutes/spring-microservices-v3/blob/main/03.microservices/01-step-by-step-changes/readme.md#spring-cloud-api-gateway---step-22-to-step-25
+
+
+
+TOP Recommendation from Debugging Guide:
+
+(6) Some student reported success when using lower-case-service-id instead of spring.cloud.gateway.discovery.locator.lowerCaseServiceId. See if it helps!
+
+spring.cloud.gateway.discovery.locator.enabled=true
+ 
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+
+Update to Step 29 - Change in Configuration
+Use maxAttempts instead of maxRetryAttempts
+
+resilience4j.retry.instances.sample-api.maxAttempts=5 #NEW
+#resilience4j.retry.instances.sample-api.maxRetryAttempts=5 #OLD
+
+Link for the Next Lecture
+
+
+In the next lecture, we will import projects into eclipse.
+
+
+
+Here is the link to bookmark:
+
+Spring Boot 2.4+ - https://github.com/in28minutes/spring-microservices-v2/tree/main/04.docker
+
+Spring Boot 3.0+ - https://github.com/in28minutes/spring-microservices-v3/tree/main/04.docker
+
+
+
+
+
+
